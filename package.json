@@ -27,5 +27,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2"
-  }
+  },
+  "repository": "git@github.com:lyq20/web-project.git",
+  "author": "lyq <1040541007@qq.com>"
 }
