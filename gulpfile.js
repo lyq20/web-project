@@ -56,7 +56,7 @@ gulp.task('server', () => {
   return gulp.src('./dev')
     .pipe(server({
       host: 'localhost',
-      port: 8080,
+      port: 1230,
       livereload: true,
       middleware: [
         proxy('/api', {
