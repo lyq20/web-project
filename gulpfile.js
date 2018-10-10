@@ -1,6 +1,6 @@
 // 1、创建一个webserver
 // 2、编译SASS
-// 3、基于CommonJS的模块化（webpack-stream插件）
+// 3、基于ES6的模块化（webpack-stream插件）
 // 4、Mock数据
 
 const gulp = require('gulp')
@@ -62,6 +62,13 @@ gulp.task('server', () => {
         proxy('/api', {
           target: 'http://localhost:3000',
           changeOrigin: true
+        }),
+        proxy('/lagou', {
+          target: 'https://m.lagou.com',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/lagou': ''
+          }
         })
       ]
     }))
@@ -91,6 +98,12 @@ gulp.task('copymock', () => {
     .pipe(gulp.dest('./dev/mock'))
 })
 
+// copy images
+gulp.task('copyimages', () => {
+  return gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('./dev/images'))
+})
+
 // 文件修改 watch
 gulp.task('watch', () => {
   gulp.watch('./src/*.html', ['copyhtml'])
@@ -102,6 +115,9 @@ gulp.task('watch', () => {
   watch('./src/libs/**/*', () => {
     gulp.start(['copylibs'])
   })
+  watch('./src/images/**/*', () => {
+    gulp.start(['copyimages'])
+  })
   // watch('./src/mock/**/*', () => {
   //   gulp.start(['copymock'])
   // })
@@ -109,6 +125,6 @@ gulp.task('watch', () => {
 })
 
 // default task
-gulp.task('default', ['packscss', 'packjs', 'copyhtml', 'copyicons', 'copylibs', 'server', 'watch'], () => {
+gulp.task('default', ['packscss', 'packjs', 'copyhtml', 'copyicons', 'copylibs', 'copyimages', 'server', 'watch'], () => {
   console.log('all works!')
 })
