@@ -1,7 +1,9 @@
-const homeTpl = require('../views/home.html')
-const rander = ()=>{
-    document.querySelector('#root').innerHTML=homeTpl
+import homeTpl from '../views/home.html'
+
+const rander = () =>{
+    document.querySelector("#root").innerHTML = homeTpl
 }
-module.exports = {
+
+export default {
     rander
 }
