@@ -1,9 +1,9 @@
 import movieTpl from '../views/movie.html'
 
-const render = () =>{
-    document.querySelector("#root").innerHTML = movieTpl
+const rander = () =>{
+    document.querySelector(".home-container main").innerHTML = movieTpl
 }
 
 export default {
-    render
+    rander
 }

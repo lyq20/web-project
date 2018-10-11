@@ -56,7 +56,7 @@ gulp.task('server', () => {
   return gulp.src('./dev')
     .pipe(server({
       host: 'localhost',
-      port: 9000,
+      port: 1234,
       livereload: true,
       middleware: [
         proxy('/api', {
@@ -109,7 +109,7 @@ gulp.task('watch', () => {
   gulp.watch('./src/*.html', ['copyhtml'])
   // gulp-watch,实现文件的创建，修改，删除 watch
   // 缺点：某些操作系统不支持
-    gulp.watch('./src/styles/**/*', () => {
+  gulp.watch('./src/styles/**/*', () => {
       gulp.start(['packscss'])
     })
     watch('./src/libs/**/*', () => {
