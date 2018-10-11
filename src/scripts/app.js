@@ -1,5 +1,5 @@
-const homeController = require('./controllers/home');
 import movieController from './controllers/movie';
+import homeController from './controllers/home'
 
 
 homeController.rander();
