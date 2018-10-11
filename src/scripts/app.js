@@ -1,3 +1,3 @@
-import movieController from './controllers/movie'
+const homeController = require('./controllers/home')
 
-movieController.render()
+homeController.rander()
