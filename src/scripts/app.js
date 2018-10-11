@@ -1,7 +1,6 @@
-const homeController = require('./controllers/home')
+const homeController = require('./controllers/home');
+const movieController = require('./controllers/movie');
 
-<<<<<<< HEAD
+
+homeController.rander();
 movieController.render();
-=======
-homeController.rander()
->>>>>>> hou
