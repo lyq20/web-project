@@ -1,3 +1,3 @@
 import movieController from './controllers/movie'
 
-movieController.render()
+movieController.render();

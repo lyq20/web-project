@@ -719,3 +719,8 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle; }
+
+header {
+  color: aliceblue;
+  background: #cc3;
+  width: 100%; }
