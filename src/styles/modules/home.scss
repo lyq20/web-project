@@ -3,14 +3,14 @@
 }
 
 
-@font-face {
-    font-family: 'yofont';
-    src: url('/iconfonts/iconfont.eot');
-    src: url('/iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('/iconfonts/iconfont.woff') format('woff'),
-    url('/iconfonts/iconfont.ttf') format('truetype'),
-    url('/iconfonts/iconfont.svg#iconfont') format('svg');
-  }
+// @font-face {
+//     font-family: 'yofont';
+//     src: url('/iconfonts/iconfont.eot');
+//     src: url('/iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
+//     url('/iconfonts/iconfont.woff') format('woff'),
+//     url('/iconfonts/iconfont.ttf') format('truetype'),
+//     url('/iconfonts/iconfont.svg#iconfont') format('svg');
+//   }
 
   @font-face {
   font-family: 'yofont';
@@ -81,9 +81,19 @@
             }
         }
     }
-}
-main{
-    @include flex();
-    width: 100%;
-    background-color: #fff;
+
+    main{
+        @include flex();
+        width: 100%;
+        background-color: #fff;
+    }
+
+    nav{
+        width: 2.65rem;
+        position: absolute;
+        height: 100%;
+        margin-top: 0.5rem;
+        background-color: #282828;
+        display: none;
+    }
 }
