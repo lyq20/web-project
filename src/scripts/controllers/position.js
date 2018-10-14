@@ -11,6 +11,7 @@ const render = async () => {
     let listbot = datasources = (await positionModel.listbot()).data.films
     await renderListbot(listbot)
     await renderList(list)
+    positionclick()
 }
 const renderList = async (list) => {
     let template = Handlebars.compile(positionListTpl)
@@ -22,6 +23,14 @@ const renderListbot = async (listbot) => {
     let html = template({ listbot })
     $('main .two').html(html)
 }
+const positionclick = ()=>{
+    $('.position li').on('tap',function(){
+        let hashs = ['details']
+        // let num = $(this).index()
+        location.hash = hashs
+        console.log($(this).index())
+    })
+}
 export default {
-    render
+    render,
 }

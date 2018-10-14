@@ -19,13 +19,15 @@ const navEvent = ()=>{
 
 // 页面跳转
 const Jump = ()=>{
-    $('nav li').on("click",function(){
-        // console.log($(this).index())
-        if($(this).index()==0){
-            
-        }
+    $('nav li').on("tap",function(){
+        let hashs = ['#position', '#movie',]
+        location.hash = hashs[$(this).index()]
+        $('nav').hide()
     })
 }
+
+
+// 页面切换
 export default {
     render
 }
