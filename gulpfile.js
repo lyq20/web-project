@@ -59,16 +59,16 @@ gulp.task('server', () => {
       port: 1234,
       livereload: true,
       middleware: [
-        proxy('/api', {
-          target: 'http://localhost:3000',
+        proxy('/usr', {
+          target: 'https://pic.maizuo.com/',
           changeOrigin: true
         }),
-        proxy('/lagou', {
-          target: 'https://m.lagou.com',
+        proxy('/v4', {
+          target: 'https://m.maizuo.com/',
           changeOrigin: true,
-          pathRewrite: {
-            '^/lagou': ''
-          }
+          // pathRewrite: {
+          //   '^/lagou': ''
+          // }
         })
       ]
     }))
