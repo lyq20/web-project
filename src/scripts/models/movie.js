@@ -6,6 +6,6 @@ const list = () => {
         }
     })
 }
-module.exports = {
+export default {
     list
 }

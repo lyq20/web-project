@@ -1,0 +1,21 @@
+nav{
+    .nav{
+        ul{
+            li{
+                width: 100%;
+                height: 0.51rem;
+                border: 0.01rem solid #2e2e2e;
+                padding: 0.2rem; 
+                @include flexbox();
+                @include justify-content(space-between);
+                a{
+                    color: #9a9a9a;
+                }
+                i{
+                    color: #9a9a9a;
+                    transform: rotateZ(-90deg)
+                }
+             }
+        }
+    }
+}
