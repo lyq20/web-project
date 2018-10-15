@@ -1,16 +1,16 @@
-import Router from './utils/router'
-import movieController from './controllers/movie';
 import homeController from './controllers/home';
+import movieController from './controllers/movie';
 import positionController from './controllers/position';
 import navController from './controllers/aside';
 import detailsController from './controllers/details'
-
+import Router from './utils/router'
 
 homeController.render();
-positionController.render();
+movieController.render()
+
+
 navController.render();
-// movieController.render()
-// detailsController.render()
+detailsController.render()
 
 const router = new Router()
 router.init()
