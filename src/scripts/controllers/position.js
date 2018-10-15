@@ -26,9 +26,9 @@ const renderListbot = async (listbot) => {
 const positionclick = ()=>{
     $('.position li').on('tap',function(){
         let hashs = ['details']
-        // let num = $(this).index()
+        let num = $(this).attr('data-id')
+        console.log(num)
         location.hash = hashs
-        console.log($(this).index())
     })
 }
 export default {
