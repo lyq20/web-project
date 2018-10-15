@@ -2,7 +2,7 @@ import Router from './utils/router'
 import movieController from './controllers/movie';
 import homeController from './controllers/home';
 import positionController from './controllers/position';
-import navController from './controllers/nav';
+import navController from './controllers/aside';
 import detailsController from './controllers/details'
 
 
