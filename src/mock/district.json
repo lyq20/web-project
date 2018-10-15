@@ -1,0 +1,77 @@
+{
+    "content": {
+      "data": {
+        "isLogin": false,
+        "page": {
+          "result": [{
+            "id": 5140,
+            "name": "朝阳区",
+            "pinyin": "zhao-yang-qu"
+          },{
+            "id": 5143,
+            "name": "东城区",
+            "pinyin": "dong-cheng-qu"
+          },{
+            "id": 5144,
+            "name": "大兴区",
+            "pinyin": "da-xing-qu"
+          },{
+            "id": 5145,
+            "name": "通州区",
+            "pinyin": "tong-zhou-qu"
+          },{
+            "id": 5147,
+            "name": "顺义区",
+            "pinyin": "shun-yi-qu"
+          },{
+            "id": 196,
+            "name": "海淀区",
+            "pinyin": "hai-dian-qu"
+          },{
+            "id": 4849,
+            "name": "西城区",
+            "pinyin": "xi-cheng-qu"
+          },{
+            "id": 637,
+            "name": "丰台区",
+            "pinyin": "feng-tai-qu"
+          },{
+            "id": 4843,
+            "name": "密云区",
+            "pinyin": "mi-yun-qu"
+          },{
+            "id": 4861,
+            "name": "房山区",
+            "pinyin": "fang-shan-qu"
+          },{
+            "id": 4859,
+            "name": "门头沟区",
+            "pinyin": "men-tou-gou-qu"
+          },{
+            "id": 4847,
+            "name": "昌平区",
+            "pinyin": "chang-ping-qu"
+          },{
+            "id": 4872,
+            "name": "石景山区",
+            "pinyin": "shi-jing-shan-qu"
+          },{
+            "id": 3174,
+            "name": "平谷区",
+            "pinyin": "ping-gu-qu"
+          },{
+            "id": 6900,
+            "name": "怀柔区",
+            "pinyin": "huai-rou-qu"
+          },{
+            "id": 4834,
+            "name": "延庆区",
+            "pinyin": "yan-qing-qu"
+          }]
+        }
+      },
+      "rows": []
+    },
+    "message": "查询成功!",
+    "state": 1
+}
