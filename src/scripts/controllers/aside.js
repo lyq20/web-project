@@ -1,7 +1,7 @@
-import navTpl from '../views/nav.html'
+import navTpl from '../views/aside.html'
 
 const render = () =>{
-    document.querySelector("nav").innerHTML = navTpl
+    $('aside').html(navTpl)
     init()
 }
 
@@ -13,16 +13,16 @@ const init = ()=>{
 // 点击隐藏显示
 const navEvent = ()=>{
     $('header>.left').on('click',()=>{
-        $('nav').toggle('linear')
+        $('aside').toggle('linear')
     })
 }
 
 // 页面跳转
 const Jump = ()=>{
-    $('nav li').on("tap",function(){
+    $('aside li').on("tap",function(){
         let hashs = ['#position', '#movie',]
         location.hash = hashs[$(this).index()]
-        $('nav').hide()
+        $('aside').hide()
     })
 }
 
