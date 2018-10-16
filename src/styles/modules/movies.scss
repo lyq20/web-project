@@ -1,12 +1,109 @@
-main{
+.movie_box{
     width:100%;
-    flex: 1;
     padding-left:.15rem;
     padding-right:.15rem;
-    background: #fff;
 
+    @include flexbox();
+    @include flex-direction(column);
+    .movies_nav{
+        width: 100%;
+        height: .45rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        border-bottom: 1px solid #fe6e00;
+        
+        a{
+            width:50%;
+            height: .45rem;
+            line-height: .45rem;
+            text-align: center;
+            color: #6a6a6a;
+            font-size: .16rem;
+    
+        }
+        .change{
+            border-bottom: 3px solid #fe6e00;
+            color: #fe6e00;
+        }
+    }
 }
-.movies_nav{
-    width: 100%;
-    height: .45rem;
+.movie_box{
+    // overflow-y: scroll;
+    .movies_ul{
+        width:100%;
+        li{
+            width: 100%;
+            height: 1.25rem;
+            padding: .2rem 0;
+            @include flexbox();
+            @include border(0 0 1px 0,#c9c9c9 ,dashed);
+            .film_img{
+                width: .6rem;
+                height:.83rem;
+                overflow: hidden;
+                img{
+                    width: 100%; 
+                    height: auto;
+                 }
+            }
+            
+            .film{
+                height: .84rem;
+                @include flexbox();
+                @include flex-direction(column);
+                padding-left:.15rem;
+                .film_desc{
+                    @include flexbox();
+                    // @include flex-direction(column);
+                   
+                    height: 0.32rem;
+                    line-height: .32rem;
+                    font-size: .16rem;
+
+                    p{
+                        width: 2.09rem;
+                        height: 0.32rem;
+                        color: #000;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    span{
+                        color: #fe6e00;
+                        height: 0.32rem;
+                    }
+                    i{
+                        width: .12rem;
+                        height: 0.32rem;
+                        font-size: .14rem;
+                        line-height: .32rem;
+                        align-self: center;
+                        color: #6a6a6a;
+                        font-family: "宋体";
+                        text-align: center;
+                    }
+                }
+                .film_intro{
+                    height: .24rem;
+                    line-height: .24rem;
+                    color: #8e8e8e;
+                    font-size: .12rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 100%;
+                    display: inline-block;
+                }
+                .film_counts{
+                    line-height: .24rem;
+                    color: #8e8e8e;
+                    font-size: .12rem;
+                    .color1{
+                        color: #8aa2bf;
+                    }
+                }
+
+            }
+        }
+    }
 }

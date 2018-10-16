@@ -1,0 +1,17 @@
+{{#each list}}
+<li>
+    <div class="film_img"><img src="{{poster.thumbnail}}" alt="影片海报"></div>
+    <div class="film">
+        <div class="film_desc">
+            <p>{{name}}</p>
+            <span>{{grade}}</span>
+            <i>></i>
+        </div>
+        <div class="film_intro">{{intro}}</div>
+        <div class="film_counts">
+            <span class="color1">{{cinemaCount}}</span><span>家影院上映&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="color1">{{watchCount}}</span><span>人购票</span>
+        </div>
+    </div>
+</li>
+{{/each}}

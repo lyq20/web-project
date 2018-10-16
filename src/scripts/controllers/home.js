@@ -1,9 +1,11 @@
 import homeTpl from '../views/home.html'
 
-const rander = () =>{
+const render = () =>{
     document.querySelector("#root").innerHTML = homeTpl
+
 }
 
 export default {
-    rander
+    render
 }
+

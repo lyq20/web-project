@@ -1,25 +1,23 @@
-<div class="cinema-wrap" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834">
-    <div class="cinema clearfix" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0">
-        <div class="cinema-title" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0">
-            <div class="cinema-title-cinemaname" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.0">
-                <i data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.0.0">大地数字影院金锣湾店</i>
-                <span data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.0.1"></span>
-                <span data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.0.2"></span>
+{{#each currentCinemaList}}
+<div class="cinema-wrap" data-pinyin="{{district.pinyin}}">
+    <div class="cinema g-clear" data-pinyin="{{district.pinyin}}">
+        <div class="cinema-title" data-pinyin="{{district.pinyin}}">
+            <div class="cinema-title-cinemaname" data-pinyin="{{district.pinyin}}">
+                <i data-pinyin="{{district.pinyin}}">{{name}}</i>
+                <i class="icon-zuo book" data-pinyin="{{district.pinyin}}">座</i>
+                <span data-pinyin="{{district.pinyin}}"></span>
             </div>
-            <span class="cinema-title-tip no-buy" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.1">
-                <i class="tip_04" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.1.0">暂不支持购票</i>
+            <span class="cinema-title-address" data-pinyin="{{district.pinyin}}">
+                <span data-pinyin="{{district.pinyin}}">{{address}}</span>
+                <span data-pinyin="{{district.pinyin}}"></span>
             </span>
-            <span class="cinema-title-address" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.2">
-                <span data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.2.0">北京市延庆区妫水北街39号1幢H座首层（金锣湾商业中心）沃尔玛旁</span>
-                <span data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.2.1"> </span>
-            </span>
-            <div class="cinema-title-location" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.3">
-                <span data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.3.0">距离</span>
-                <span data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.0.3.1">未知</span>
+            <div class="cinema-title-location" data-pinyin="{{district.pinyin}}">
+                <span data-pinyin="{{district.pinyin}}">距离</span><span data-pinyin="{{district.pinyin}}">未知</span>
             </div>
         </div>
-        <span class="pull-right nav" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.1">
-            <i class="iconfont icon-arrow-right book" data-reactid=".0.1.$CinemaListView-0.1:$yan-qing-qu.1.$4834.0.1.0"></i>
+        <span class="pull-right nav" data-pinyin="{{district.pinyin}}">
+            <i class="yo-ico icon-arrow-right book" data-pinyin="{{district.pinyin}}">&#xf0344;</i>
         </span>
     </div>
 </div>
+{{/each}}

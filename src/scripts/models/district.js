@@ -1,12 +1,22 @@
 const district = () => {
-    return $.ajax({
-      url: '/v4/city/district',
-      success: (result) => {
-        return result
-      }
-    })
-  }
+  return $.ajax({
+    url: '/city/district',
+    success: (result) => {
+      return result
+    }
+  })
+}
+
+const cinemaList = () => {
+  return $.ajax({
+    url: '/v4/api/cinema',
+    success: (result) => {
+      return result
+    }
+  })
+}
   
 export default {
-    district
+    district,
+    cinemaList
 }
