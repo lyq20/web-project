@@ -29,7 +29,7 @@
 }
 .movie_box{
     // overflow-y: scroll;
-    .movies_ul{
+    .movies_ul,.coming_ul{
         width:100%;
         li{
             width: 100%;
@@ -68,6 +68,9 @@
                         text-overflow: ellipsis;
                         white-space: nowrap;
                     }
+                    .film_name{
+                        width:2.32rem;
+                    }
                     span{
                         color: #fe6e00;
                         height: 0.32rem;
@@ -100,6 +103,9 @@
                     font-size: .12rem;
                     .color1{
                         color: #8aa2bf;
+                    }
+                    .color2{
+                        color: #ffb375;
                     }
                 }
 
