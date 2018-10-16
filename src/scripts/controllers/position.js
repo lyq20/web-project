@@ -21,14 +21,20 @@ const renderList = async (list) => {
 const renderListbot = async (listbot) => {
     let template = Handlebars.compile(positionListTplbot)
     let html = template({ listbot })
+
     $('main .two').html(html)
 }
-const positionclick = ()=>{
-    $('.position li').on('tap',function(){
+const positionclick = () => {
+    $('.position li').on('tap', function () {
         let hashs = ['details']
-        let num = $(this).attr('data-id')
-        console.log(num)
+        let good = {};
+        good.id = $(this).attr('data-id')
+        let arr = []
+        arr.push(good);
+        localStorage.setItem("ids", JSON.stringify(arr));
+
         location.hash = hashs
+
     })
 }
 export default {
