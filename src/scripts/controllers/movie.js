@@ -15,6 +15,7 @@ const render = async () => {
     scrollmovie();
     // scrollcom();
     console.log(list, coming);
+    movieClick()
 }
 const renderList = async (list, coming) => {
     let template = Handlebars.compile(moviesListTpl);
@@ -83,6 +84,20 @@ const scrollcom = () => {
     })
 }
 
+
+const movieClick =()=>{
+    $('.movie_box>ul>li').on('tap',function(){
+        // console.log($(this).attr('data-id'))
+        let hashs = ['details']
+        let good = {};
+        good.id = $(this).attr('data-id')
+        let arr = []
+        arr.push(good);
+        localStorage.setItem("ids", JSON.stringify(arr));
+
+        location.hash = hashs
+    })
+}
 export default {
     render
 }

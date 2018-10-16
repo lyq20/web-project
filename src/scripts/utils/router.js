@@ -21,8 +21,9 @@ function Router() {
   
   // tabbar switch
   Router.prototype.switchTabbar = function () {
-    let hashs = ['#position', '#movie',]
+    let hashs = ['#position', '#movie',"#cinema","#details"]
     let index = hashs.indexOf(this.currentHash)
+
   }
   
   // 路由切换监听

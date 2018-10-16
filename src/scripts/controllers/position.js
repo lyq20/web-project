@@ -12,6 +12,7 @@ const render = async () => {
     await renderListbot(listbot)
     await renderList(list)
     positionclick()
+    listClick()
 }
 const renderList = async (list) => {
     let template = Handlebars.compile(positionListTpl)
@@ -21,16 +22,31 @@ const renderList = async (list) => {
 const renderListbot = async (listbot) => {
     let template = Handlebars.compile(positionListTplbot)
     let html = template({ listbot })
+
     $('main .two').html(html)
 }
-const positionclick = ()=>{
-    $('.position li').on('tap',function(){
+// 详情页跳转
+const positionclick = () => {
+    $('.position li').on('tap', function () {
         let hashs = ['details']
-        let num = $(this).attr('data-id')
-        console.log(num)
+        let good = {};
+        good.id = $(this).attr('data-id')
+        let arr = []
+        arr.push(good);
+        localStorage.setItem("ids", JSON.stringify(arr));
+
         location.hash = hashs
     })
 }
+
+// 更多、类表页跳转
+const listClick = ()=>{
+    $('.position .more>a').on('tap',function(){
+        let hashs = ['movie']
+        location.hash = hashs
+    })
+}
+
 export default {
     render,
 }
