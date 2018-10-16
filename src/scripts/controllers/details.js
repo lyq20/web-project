@@ -1,10 +1,10 @@
 import detailsTpl from '../views/details.html'
-import positionModel from '../models/position'
+import positionModel from '../models/movie'
 var str = ''
 const render = async () => {
     document.querySelector("main").innerHTML = detailsTpl
     let detailslist = (await positionModel.list()).data.films
-    let detailslists = (await positionModel.listbot()).data.films
+    let detailslists = (await positionModel.coming()).data.films
 
     let str = JSON.parse(localStorage.getItem("ids"))
     for (var i = 0; i < detailslist.length; i++) {

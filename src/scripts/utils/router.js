@@ -21,13 +21,9 @@ function Router() {
   
   // tabbar switch
   Router.prototype.switchTabbar = function () {
-    let hashs = ['#position', '#movie','#details']
+    let hashs = ['#position', '#movie',"#cinema","#details"]
     let index = hashs.indexOf(this.currentHash)
-    $('nav li')
-      .eq(index)
-      .addClass('active')
-      .siblings()
-      .removeClass('active')
+
   }
   
   // 路由切换监听

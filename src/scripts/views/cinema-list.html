@@ -1,0 +1,23 @@
+{{#each currentCinemaList}}
+<div class="cinema-wrap" data-pinyin="{{district.pinyin}}">
+    <div class="cinema g-clear" data-pinyin="{{district.pinyin}}">
+        <div class="cinema-title" data-pinyin="{{district.pinyin}}">
+            <div class="cinema-title-cinemaname" data-pinyin="{{district.pinyin}}">
+                <i data-pinyin="{{district.pinyin}}">{{name}}</i>
+                <i class="icon-zuo book" data-pinyin="{{district.pinyin}}">座</i>
+                <span data-pinyin="{{district.pinyin}}"></span>
+            </div>
+            <span class="cinema-title-address" data-pinyin="{{district.pinyin}}">
+                <span data-pinyin="{{district.pinyin}}">{{address}}</span>
+                <span data-pinyin="{{district.pinyin}}"></span>
+            </span>
+            <div class="cinema-title-location" data-pinyin="{{district.pinyin}}">
+                <span data-pinyin="{{district.pinyin}}">距离</span><span data-pinyin="{{district.pinyin}}">未知</span>
+            </div>
+        </div>
+        <span class="pull-right nav" data-pinyin="{{district.pinyin}}">
+            <i class="yo-ico icon-arrow-right book" data-pinyin="{{district.pinyin}}">&#xf0344;</i>
+        </span>
+    </div>
+</div>
+{{/each}}

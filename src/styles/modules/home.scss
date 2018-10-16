@@ -10,7 +10,14 @@
   url('/iconfonts/iconfont.svg#iconfont') format('svg');
 }
 
-
+@font-face {
+    font-family: 'yofont';
+    src: url('/iconfonts/iconfont-cinema.eot');
+    src: url('/iconfonts/iconfont-cinema.eot?#iefix') format('embedded-opentype'),
+    url('/iconfonts/iconfont-cinema.woff') format('woff'),
+    url('/iconfonts/iconfont-cinema.ttf') format('truetype'),
+    url('/iconfonts/iconfont-cinema.svg#iconfont') format('svg');
+}
 
 .home-container{
     height: 100%;

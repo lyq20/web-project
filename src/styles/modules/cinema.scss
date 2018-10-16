@@ -1,0 +1,107 @@
+body {
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+    font-family: 'Microsoft YaHei', Tahoma, Helvetica, Arial, sans-serif;
+}
+
+.cinema-view {
+    background-color: #fff;
+    width: 100%;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.district {
+    .title {
+        height: .4rem;
+        line-height: .4rem;
+        font-size: .14rem;
+        padding-left: .16rem;
+        background: #e1e1e1;
+        margin-bottom: 1px;
+        color: #636363;
+        cursor: pointer;
+    }
+    .content {
+        display: none;
+        .cinema-wrap {
+            margin: 0 auto;
+            @include border(0 0 1px 0, #e1e1e1);
+            cursor: pointer;
+            min-width: 3.2rem;
+            .cinema {
+                @include border-radius(.05rem);
+                padding: .1rem 0 .12rem .16rem;
+                cursor: pointer;
+                .cinema-title {
+                    width: 75%;
+                    min-width: 2.3rem;
+                    float: left;
+                    cursor: pointer;
+                    overflow: hidden;
+                    .cinema-title-cinemaname {
+                        display: inline-block;
+                        font-size: .16rem;
+                        width: 100%;
+                        margin-bottom: .05rem;
+                        i {
+                            font-style: normal;
+                            margin-right: .03rem;
+                        }
+                        i:first-child {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            display: inline-block;
+                            vertical-align: text-top;
+                            max-width: 80%;
+                        }
+                        .book {
+                            color: #fc8558;
+                        }
+                    }
+                    .cinema-title-address {
+                        display: inline-block;
+                        font-size: .12rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        width: 100%;
+                        color: #ccc;
+                    }
+                    .cinema-title-location {
+                        font-size: .12rem;
+                        color: #ccc;
+                    }
+                }
+                .nav {
+                    padding-right: .15rem;
+                    line-height: .36rem;
+                    color: #c6c6c6;
+                }
+            }
+        }
+    }
+    &.active {
+        .content {
+            display: block;
+        }
+    }
+}
+.icon-zuo {
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    @include border(1px, #fc8558);
+    
+    font-size: .12rem;
+    text-align: center;
+    line-height: .2rem;
+}
+.icon-zuo:after {
+    @include border-radius(50%);
+}
+.icon-arrow-right {
+    font-size: .16rem !important;
+}
