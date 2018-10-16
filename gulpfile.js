@@ -65,10 +65,11 @@ gulp.task('server', () => {
         }),
         proxy('/v4', {
           target: 'https://m.maizuo.com/',
-          changeOrigin: true,
-          // pathRewrite: {
-          //   '^/lagou': ''
-          // }
+          changeOrigin: true
+        }),
+        proxy('/city', {
+          target: 'http://localhost:3000',
+          changeOrigin: true
         })
       ]
     }))
