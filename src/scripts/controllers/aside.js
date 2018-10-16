@@ -20,7 +20,7 @@ const navEvent = ()=>{
 // 页面跳转
 const Jump = ()=>{
     $('aside li').on("tap",function(){
-        let hashs = ['#position', '#movie',]
+        let hashs = ['#position', '#movie']
         location.hash = hashs[$(this).index()]
         $('aside').hide()
     })
