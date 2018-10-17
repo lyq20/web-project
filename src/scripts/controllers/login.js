@@ -7,6 +7,7 @@ const render = ()=>{
 }
 // 验证
 var bsTop = false
+var bsTops = false
 const testlogin = () =>{
     $('.login input').eq(0).on('focus',function(){
         var mobile=$(this).val();
@@ -35,7 +36,7 @@ const testlogin = () =>{
         $(this).css({
             color:"#000"
         })
-        bsTop = true
+        bsTops = true
     }).on('blur',function () {
         var Verification=$(this).val();
         let reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
@@ -44,7 +45,8 @@ const testlogin = () =>{
             $(this).css({
                 color:"red"
             })
-            bsTop = false
+            bsTops = false
+
         }       
     })
 
@@ -53,10 +55,17 @@ const testlogin = () =>{
 // 登录提交
 const Submission = ()=>{
     $('.login button').on('tap',function(){
-        if(!bsTop){
-            alert("请正确输入手机号或验证码")
-        }else{
+        if(bsTop&&bsTops){
             alert('登陆成功')
+            let hashs = ['#position']
+            location.hash = hashs
+            
+        }else if(bsTop&&!bsTops){
+            alert("请输入正确的验证码")
+        }else if(!bsTop&&bsTops){
+            alert('请正确输入手机号')
+        }else{
+            alert('请正确输入手机号和验证码')
         }
         
     })
