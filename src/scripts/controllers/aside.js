@@ -7,7 +7,7 @@ const render = () =>{
 
 const init = ()=>{
     navEvent()
-    Jump()
+    Jump();
 
 }
 // 点击隐藏显示
