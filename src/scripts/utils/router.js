@@ -21,8 +21,23 @@ function Router() {
   
   // tabbar switch
   Router.prototype.switchTabbar = function () {
-    let hashs = ['#position', '#movie',"#cinema","#details"]
+    let hashs = ['#position', '#movie',"#cinema","#details","#coming"]
     let index = hashs.indexOf(this.currentHash)
+    if(index == 1){
+      $('.movies_nav>a')
+        .eq(0)
+        .addClass('change')
+        .siblings()
+        .removeClass('change')
+    }
+
+    if(index == 4){
+      $('.movies_nav>a')
+        .eq(1)
+        .addClass('change')
+        .siblings()
+        .removeClass('change')
+    }
 
   }
   

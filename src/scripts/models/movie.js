@@ -24,7 +24,7 @@ const loadmoremovie = (page) => {
 }
 const loadmorecom = (page) => {
     return $.ajax({
-        url: '/v4/api/film/now-playing?page=' + page + '&count=7',
+        url: '/v4/api/film/coming-soon?page=' + page + '&count=7',
         success: (result) => {
             return result
         }
