@@ -13,6 +13,7 @@ const render = async () => {
     //滚动事件，实现加载更多
     scroll();
     comClick();
+    movieClick();
 }
 
 const renderList = async (list) => {
@@ -29,7 +30,7 @@ const scroll = () => {
 
         let y = this.y,
             maxY = y - this.maxScrollY
-        console.log(this.y, this.maxScrollY, maxY)
+        // console.log(this.y, this.maxScrollY, maxY)
         if (maxY <= 5 ) {
             this.scrollTo(0, this.maxScrollY)
             console.log('scrollmovie')
@@ -40,7 +41,9 @@ const scroll = () => {
             ]
             renderList(list)
         }
+        movieClick();
     })
+    
 }
 const comClick = ()=>{
     $('.movies_nav>a').eq(1).on('tap',function(){
@@ -49,7 +52,26 @@ const comClick = ()=>{
         // $(this).addClass('change').siblings().removeClass('change')
     })
 }
+// const movieClick = ()=>{
+//     $('.movies_ul>li').on('tap',function(){
+//         let hashs = ['details']
+//         location.hash = hashs
+//     })
+// }
 
+const movieClick =()=>{
+    $('.movie_box>ul>li').on('tap',function(){
+        let hashs = ['details']
+        let good = {};
+        good.id = $(this).attr('data-id')
+        console.log(good.id)
+        console.log($('.movie_box>ul>li').length)
+        let arr = []
+        arr.push(good);
+        localStorage.setItem("ids", JSON.stringify(arr));
+        location.hash = hashs
+    })
+}
 export default {
     render
 }

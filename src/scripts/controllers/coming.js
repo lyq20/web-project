@@ -15,6 +15,7 @@ const render = async () => {
     //滚动事件，实现加载更多
     scroll();
     comClick();
+    movieClick()
 }
 
 const renderComing = async (coming) => {
@@ -38,14 +39,29 @@ const scroll = () => {
             ]
             renderComing(coming)
         }
+    movieClick()
+
     })
 }
 const comClick = ()=>{
     $('.movies_nav>a').eq(0).on('tap',function(){
         let hashs = ['movie']
         location.hash = hashs
-        console.log(this)
+        // console.log(this)
         // $(this).addClass('change').siblings().removeClass('change')
+    })
+}
+
+
+const movieClick =()=>{
+    $('.movie_box>ul>li').on('tap',function(){
+        let hashs = ['details']
+        let good = {};
+        good.id = $(this).attr('data-id')
+        let arr = []
+        arr.push(good);
+        localStorage.setItem("ids", JSON.stringify(arr));
+        location.hash = hashs
     })
 }
 export default {
