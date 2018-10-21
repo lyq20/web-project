@@ -24,13 +24,13 @@ const renderComing = async (coming) => {
 }
 const scroll = () => {
 
-    let comScroll = new BScroll('main', {
+    let comScroll = new BScroll('.movie_box', {
         probeType: 2
     })
     comScroll.on('scrollEnd', async function () {
         let y = this.y,
             maxY = y - this.maxScrollY
-        if (maxY >= 0) {
+        if (y <= maxY) {
             let result = await moviesModel.loadmorecom(++compage)
             let coming = datasource2 = [
                 ...datasource2,
@@ -40,8 +40,8 @@ const scroll = () => {
         }
     })
 }
-const comClick = ()=>{
-    $('.movies_nav>a').eq(0).on('tap',function(){
+const comClick = () => {
+    $('.movies_nav>a').eq(0).on('tap', function () {
         let hashs = ['movie']
         location.hash = hashs
         console.log(this)

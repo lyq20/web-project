@@ -22,16 +22,14 @@ const renderList = async (list) => {
 }
 const scroll = () => {
 
-    let movScroll = new BScroll('main', {
+    let movScroll = new BScroll('.movie_box', {
         probeType: 2
     })
     movScroll.on('scrollEnd', async function () {
-
         let y = this.y,
             maxY = y - this.maxScrollY
-        console.log(this.y, this.maxScrollY, maxY)
-        if (maxY <= 5 ) {
-            this.scrollTo(0, this.maxScrollY)
+        if (y <= maxY) {
+            this.scrollTo(0, this.y)
             console.log('scrollmovie')
             let result = await moviesModel.loadmoremovie(++moviepage)
             let list = datasource = [
@@ -42,8 +40,8 @@ const scroll = () => {
         }
     })
 }
-const comClick = ()=>{
-    $('.movies_nav>a').eq(1).on('tap',function(){
+const comClick = () => {
+    $('.movies_nav>a').eq(1).on('tap', function () {
         let hashs = ['coming']
         location.hash = hashs
         // $(this).addClass('change').siblings().removeClass('change')

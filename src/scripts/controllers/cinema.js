@@ -37,7 +37,7 @@ const cinemaTab = (cinemaList) => {
 }
 
 const cinemaClick = () => {
-  $('.cinema-wrap').on('tap', function() {
+  $('.cinema-wrap').on('tap', function () {
     theatreControllers.render($(this).attr('data-id'));
   })
 }
